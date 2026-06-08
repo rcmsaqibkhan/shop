@@ -317,13 +317,17 @@
     <script>
         $(document).ready(function() {
 
-            $('#ordersTable').DataTable({
-                responsive: true,
-                pageLength: 5,
-                ordering: true,
-                searching: true,
-                lengthMenu: [5, 10, 25, 50, 100]
-            });
+
+            if ($('#ordersTable tbody tr td[colspan]').length == 0) {
+                $('#ordersTable').DataTable({
+                    responsive: true,
+                    pageLength: 5,
+                    ordering: true,
+                    searching: true,
+                    lengthMenu: [5, 10, 25, 50, 100]
+                });
+            }
+
 
         });
 
