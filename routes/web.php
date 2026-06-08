@@ -6,6 +6,7 @@ use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SupplierController;
 use App\Models\Category;
+use App\Models\Customer;
 use App\Models\Order;
 use App\Models\Product;
 use App\Models\Supplier;
@@ -26,11 +27,13 @@ Route::middleware([
         $categories = Category::all();
         $suppliers = Supplier::all();
         $totalProducts = Product::count();
-        $orders = Order::with('customer')->latest()->get();
+        $orders = Order::with('customer')->whereDate('created_at', today())->latest()->get();
         $todaySale = Order::whereDate('created_at', Carbon::today())->sum('total_amount');
         $stock = Product::sum('quantity');
         $todayOrders = Order::whereDate('created_at', Carbon::today())->count();
-        return view('dashboard', compact('categories', 'suppliers', 'totalProducts', 'todayOrders', 'todaySale', 'stock', 'orders'));
+        $totalCustomer = Customer::count();
+        $totalSupplier = Supplier::count();
+        return view('dashboard', compact('categories', 'suppliers', 'totalProducts', 'totalSupplier', 'todayOrders', 'todaySale', 'stock', 'orders', 'totalCustomer'));
     })->name('dashboard');
     Route::get('/tables', function () {
         return view('tables.table');

@@ -25,7 +25,7 @@
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="row">
-                            <div class="col-md-3">
+                            <div class="col-md-4" id="myButton">
                                 <div class="card mini-stats-wid">
                                     <div class="card-body">
                                         <div class="d-flex">
@@ -45,7 +45,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-4">
                                 <div class="card mini-stats-wid">
                                     <div class="card-body">
                                         <div class="d-flex">
@@ -65,7 +65,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-4">
                                 <div class="card mini-stats-wid">
                                     <div class="card-body">
                                         <div class="d-flex">
@@ -85,7 +85,45 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-4">
+                                <div class="card mini-stats-wid">
+                                    <div class="card-body">
+                                        <div class="d-flex">
+                                            <div class="flex-grow-1">
+                                                <p class="text-muted fw-medium">Total Customer</p>
+                                                <h4 class="mb-0">{{ $totalCustomer }}</h4>
+                                            </div>
+
+                                            <div class="flex-shrink-0 align-self-center">
+                                                <div class="avatar-sm rounded-circle bg-info mini-stat-icon">
+                                                    <span class="avatar-title rounded-circle bg-info">
+                                                        <<i class="bx bx-group font-size-24"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card mini-stats-wid">
+                                    <div class="card-body">
+                                        <div class="d-flex">
+                                            <div class="flex-grow-1">
+                                                <p class="text-muted fw-medium">Total Supplier</p>
+                                                <h4 class="mb-0">{{ $totalSupplier }}</h4>
+                                            </div>
+
+                                            <div class="flex-shrink-0 align-self-center">
+                                                <div class="avatar-sm rounded-circle bg-info mini-stat-icon">
+                                                    <span class="avatar-title rounded-circle bg-info">
+                                                        <i class="bx bx-buildings font-size-24"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
                                 <div class="card mini-stats-wid">
                                     <div class="card-body">
                                         <div class="d-flex">
@@ -104,6 +142,7 @@
                                     </div>
                                 </div>
                             </div>
+
                         </div>
                         <!-- end row -->
 
@@ -186,7 +225,8 @@
                                     <tr>
                                         <th scope="row">
                                             <div>
-                                                <img src="assets/images/product/img-7.png" alt="" class="avatar-sm">
+                                                <img src="assets/images/product/img-7.png" alt=""
+                                                    class="avatar-sm">
                                             </div>
                                         </th>
                                         <td>
@@ -285,6 +325,10 @@
                 lengthMenu: [5, 10, 25, 50, 100]
             });
 
+        });
+
+        $('#myButton').click(function() {
+            window.location.href = '/products';
         });
     </script>
 @endpush
