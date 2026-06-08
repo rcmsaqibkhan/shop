@@ -88,6 +88,7 @@
                                         <button class="btn btn-primary" type="submit">
                                             Log In
                                         </button>
+                                        <a href="{{ route('register') }}" class="btn btn-info mt-2">Sign Up</a>
                                     </div>
 
                                 </form>
@@ -98,9 +99,7 @@
 
                     </div>
 
-                    <div class="mt-5 text-center">
-                        <p>© {{ date('Y') }} Skote. All rights reserved.</p>
-                    </div>
+
 
                 </div>
             </div>

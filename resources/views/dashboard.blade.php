@@ -85,7 +85,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-4" id="myCust">
                                 <div class="card mini-stats-wid">
                                     <div class="card-body">
                                         <div class="d-flex">
@@ -104,7 +104,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-4" id="mySup">
                                 <div class="card mini-stats-wid">
                                     <div class="card-body">
                                         <div class="d-flex">
@@ -155,7 +155,8 @@
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title mb-4">All Orders</h4>
+                                <h4 class="card-title mb-4">Today Orders</h4>
+
                                 <div class="table-responsive">
                                     <table id="ordersTable" class="table table-bordered table-striped align-middle">
                                         <thead class="table-light">
@@ -179,7 +180,7 @@
                                                 </tr>
                                             @empty
                                                 <tr>
-                                                    <td colspan="5" class="text-center text-muted">
+                                                    <td colspan="6" class="text-center text-muted">
                                                         No orders found.
                                                     </td>
                                                 </tr>
@@ -333,6 +334,13 @@
 
         $('#myButton').click(function() {
             window.location.href = '/products';
+        });
+
+        $("#mySup").click(function() {
+            window.location.href = '/suppliers'
+        });
+        $("#myCust").click(function() {
+            window.location.href = '/customers'
         });
     </script>
 @endpush

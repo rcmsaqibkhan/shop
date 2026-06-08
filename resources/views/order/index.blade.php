@@ -79,7 +79,7 @@
                                                     <td>{{ $order->customer->name ?? 'N/A' }}</td>
                                                     <td>{{ $order->order_number }}</td>
                                                     <td>Rs. {{ number_format($order->total_amount, 2) }}</td>
-                                                    <td>{{ $order->date }}</td>
+                                                    <td>{{ \Carbon\Carbon::parse($order->date)->format('d-m-y') }}</td>
                                                     <td>
                                                         <button type="button" class="btn btn-info btn-sm viewInvoice"
                                                             data-id="{{ $order->id }}">
@@ -212,7 +212,7 @@
                                                     <td>{{ $order->customer->name ?? 'N/A' }}</td>
                                                     <td>{{ $order->order_number }}</td>
                                                     <td>Rs. {{ number_format($order->total_amount, 2) }}</td>
-                                                    <td>{{ $order->date }}</td>
+                                                    <td>{{ \Carbon\Carbon::parse($order->date)->format('d M Y') }}</td>
                                                     <td>
                                                         <button type="button" class="btn btn-success btn-sm restoreOrder"
                                                             data-id="{{ $order->id }}">
@@ -445,7 +445,7 @@
                 $('#createTabLink').html('<i class="fas fa-plus me-1"></i> Create Order');
                 $('#orderNumber').val('{{ $orderNumber }}');
                 $('#customerId').val('').trigger('change');
-                $('#orderDate').val('{{ date('Y-m-d') }}');
+                $('#orderDate').val('{{ date('D-M-y') }}');
                 $('#discount').val(0);
 
                 $('#orderTable').html(`

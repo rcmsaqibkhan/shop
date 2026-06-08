@@ -33,11 +33,19 @@ Route::middleware([
         $todayOrders = Order::whereDate('created_at', Carbon::today())->count();
         $totalCustomer = Customer::count();
         $totalSupplier = Supplier::count();
-        return view('dashboard', compact('categories', 'suppliers', 'totalProducts', 'totalSupplier', 'todayOrders', 'todaySale', 'stock', 'orders', 'totalCustomer'));
+        return view('dashboard', compact(
+            'categories',
+            'suppliers',
+            'totalProducts',
+            'totalSupplier',
+            'todayOrders',
+            'todaySale',
+            'stock',
+            'orders',
+            'totalCustomer'
+        ));
     })->name('dashboard');
-    Route::get('/tables', function () {
-        return view('tables.table');
-    })->name('tables');
+
 
     Route::get('/categories', [CategoryController::class, 'index'])->name('categories.index');
     Route::post('/categories/store', [CategoryController::class, 'store'])->name('categories.store');

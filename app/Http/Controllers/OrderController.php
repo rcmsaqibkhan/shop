@@ -19,7 +19,7 @@ class OrderController extends Controller
         $trashedOrders = Order::with('customer')->onlyTrashed()->latest()->get();
         $lastOrder     = Order::latest()->first();
         $orderNumber   = $lastOrder
-            ? 'ORD-' . str_pad($lastOrder->id + 1, 5, '0', STR_PAD_LEFT)
+            ? 'ORD-' . str_pad($lastOrder->id + 1, 3, '0', STR_PAD_LEFT)
             : 'ORD-00001';
 
         return view('order.index', compact(
