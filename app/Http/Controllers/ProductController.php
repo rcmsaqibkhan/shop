@@ -18,7 +18,9 @@ class ProductController extends Controller
     {
         $categories = Category::all();
         $suppliers = Supplier::all();
-        return view('product.index', compact('categories', 'suppliers'));
+        $product = Product::all();
+        $trashPro = Product::onlyTrashed()->get();
+        return view('product.index', compact('categories', 'suppliers', 'product', 'trashPro'));
     }
 
     /**

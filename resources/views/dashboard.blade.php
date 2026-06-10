@@ -76,7 +76,7 @@
 
                                             <div class="flex-shrink-0 align-self-center">
                                                 <div class="avatar-sm rounded-circle bg-info mini-stat-icon">
-                                                    <span class="avatar-title rounded-circle bg-info">
+                                                    <span class="avatar-title rounded-circle bg-primary">
                                                         <i class="bx bx-cart-alt font-size-24"></i>
                                                     </span>
                                                 </div>
@@ -96,7 +96,7 @@
 
                                             <div class="flex-shrink-0 align-self-center">
                                                 <div class="avatar-sm rounded-circle bg-info mini-stat-icon">
-                                                    <span class="avatar-title rounded-circle bg-info">
+                                                    <span class="avatar-title rounded-circle bg-primary">
                                                         <<i class="bx bx-group font-size-24"></i>
                                                 </div>
                                             </div>
@@ -115,7 +115,7 @@
 
                                             <div class="flex-shrink-0 align-self-center">
                                                 <div class="avatar-sm rounded-circle bg-info mini-stat-icon">
-                                                    <span class="avatar-title rounded-circle bg-info">
+                                                    <span class="avatar-title rounded-circle bg-primary">
                                                         <i class="bx bx-buildings font-size-24"></i>
                                                 </div>
                                             </div>
@@ -128,13 +128,13 @@
                                     <div class="card-body">
                                         <div class="d-flex">
                                             <div class="flex-grow-1">
-                                                <p class="text-muted fw-medium">Stock</p>
+                                                <p class="text-muted fw-medium">Available Stock</p>
                                                 <h4 class="mb-0">{{ $stock }}</h4>
                                             </div>
 
                                             <div class="flex-shrink-0 align-self-center">
                                                 <div class="avatar-sm rounded-circle bg-info mini-stat-icon">
-                                                    <span class="avatar-title rounded-circle bg-info">
+                                                    <span class="avatar-title rounded-circle bg-primary">
                                                         <i class="bx bx-store font-size-24"></i> </span>
                                                 </div>
                                             </div>

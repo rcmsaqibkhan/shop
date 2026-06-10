@@ -22,11 +22,14 @@
                     <li class="nav-item">
                         <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#activeTab">
                             All Products
+                            <span class="badge bg-primary ms-1">{{ $product->count() }}</span>
                         </button>
+
                     </li>
                     <li class="nav-item">
                         <button class="nav-link" data-bs-toggle="tab" data-bs-target="#trashTab">
                             Trash Products
+                            <span class="badge bg-primary ms-1">{{ $trashPro->count() }}</span>
                         </button>
                     </li>
                 </ul>
