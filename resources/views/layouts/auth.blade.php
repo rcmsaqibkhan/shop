@@ -115,11 +115,6 @@
                             <a class="dropdown-item" href="{{ url('user/profile') }}"><i
                                     class="bx bx-user font-size-16 align-middle me-1"></i> <span
                                     key="t-profile">Profile</span></a>
-                            <a class="dropdown-item d-block" href="#"><span
-                                    class="badge bg-success float-end">11</span><i
-                                    class="bx bx-wrench font-size-16 align-middle me-1"></i> <span
-                                    key="t-settings">Settings</span></a>
-                            <div class="dropdown-divider"></div>
                             <form action="{{ route('logout') }}" method="POST">
                                 @csrf
                                 <button type="submit" class="dropdown-item text-danger">
